@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form class="log-out-form" action="{% url "logout" %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="hidden" name="log_out" value="log_out">
+        <input type="submit" value="log out">
+    </form>
+
+    username: {{ client_id }}
+
+    {{ deposits_and_credits|linebreaks }}
+
+</body>
+</html>

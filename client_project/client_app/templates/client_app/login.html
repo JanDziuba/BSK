@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {{ error }}
+    <form class="login-form" action="{% url "login" %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="username-input" class="username-input-label">USERNAME</label>
+        <input id="username-input" name="username" type="text" required>
+        <label for="password-input" class="password-input-label">PASSWORD</label>
+        <input id="password-input" name="password" type="text" required>
+        <input type="submit" class="button color-success" value="SIGN IN">
+    </form>
+
+</body>
+</html>
